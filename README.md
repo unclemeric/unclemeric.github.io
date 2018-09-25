@@ -1,2 +1,16 @@
-# vue-cli3.0-template
-vue-cli3.0
+# vue-cli3.0-app
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
+
+### Compiles and minifies for production
+```
+yarn run build
+```
