@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>VS Code 代码格式化配置 | FE-Error-Collection</title>
+  <meta name="description" content="目的统一代码格式，美化代码。 配置首先，vetur 默认设置是这个样的。也就是很多是用的 prettier 插件。打开文件 -&amp;gt; 首选项 -&amp;gt; 设置的用户设置加入下列配置信息： 123456789101112131415161718192021222324252627282930313233&amp;quot;git.autofetch&amp;quot;: false,// 控制终端游标是否闪烁。&amp;">
+<meta name="keywords" content="vs code,formatter,setting">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VS Code 代码格式化配置">
+<meta property="og:url" content="/2018/10/19/about-IDE-format-code/index.html">
+<meta property="og:site_name" content="FE-Blog">
+<meta property="og:description" content="目的统一代码格式，美化代码。 配置首先，vetur 默认设置是这个样的。也就是很多是用的 prettier 插件。打开文件 -&amp;gt; 首选项 -&amp;gt; 设置的用户设置加入下列配置信息： 123456789101112131415161718192021222324252627282930313233&amp;quot;git.autofetch&amp;quot;: false,// 控制终端游标是否闪烁。&amp;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="/hwagain/blog/2018/10/19/about-IDE-format-code/20181019154332.png">
+<meta property="og:image" content="/hwagain/blog/2018/10/19/about-IDE-format-code/20181019154456.png">
+<meta property="og:updated_time" content="2018-10-19T07:52:43.739Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VS Code 代码格式化配置">
+<meta name="twitter:description" content="目的统一代码格式，美化代码。 配置首先，vetur 默认设置是这个样的。也就是很多是用的 prettier 插件。打开文件 -&amp;gt; 首选项 -&amp;gt; 设置的用户设置加入下列配置信息： 123456789101112131415161718192021222324252627282930313233&amp;quot;git.autofetch&amp;quot;: false,// 控制终端游标是否闪烁。&amp;">
+<meta name="twitter:image" content="/hwagain/blog/2018/10/19/about-IDE-format-code/20181019154332.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="/2018/10/19/about-IDE-format-code/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="FE-Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/hwagain/blog/css/style.css">
+  
+  
+  
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/unclemeric" target="_blank">
+          <img class="img-circle img-rotate" src="/hwagain/blog/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">Meric Lai</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer &amp; Designer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> NanNing, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索">
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech="">
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope="" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/hwagain/blog/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/hwagain/blog/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/hwagain/blog/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/hwagain/blog/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/hwagain/blog/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/hwagain/blog/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/unclemeric" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/hwagain/blog/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope="" itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/error/">error</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/formatter/">formatter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/hexo-theme/">hexo-theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/hexo-theme-Hacker/">hexo-theme-Hacker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/hexo-theme-pure/">hexo-theme-pure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/layui/">layui</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/localstorage/">localstorage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/plugins/">plugins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/router/">router</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/setting/">setting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/sftp/">sftp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/vs-code/">vs code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/vue/">vue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/vuex/">vuex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hwagain/blog/tags/一键发布/">一键发布</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/hwagain/blog/tags/blog/" style="font-size: 13px;">blog</a> <a href="/hwagain/blog/tags/error/" style="font-size: 14px;">error</a> <a href="/hwagain/blog/tags/formatter/" style="font-size: 13px;">formatter</a> <a href="/hwagain/blog/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/hwagain/blog/tags/hexo-theme/" style="font-size: 13px;">hexo-theme</a> <a href="/hwagain/blog/tags/hexo-theme-Hacker/" style="font-size: 13px;">hexo-theme-Hacker</a> <a href="/hwagain/blog/tags/hexo-theme-pure/" style="font-size: 13px;">hexo-theme-pure</a> <a href="/hwagain/blog/tags/javascript/" style="font-size: 13px;">javascript</a> <a href="/hwagain/blog/tags/js/" style="font-size: 13px;">js</a> <a href="/hwagain/blog/tags/layui/" style="font-size: 14px;">layui</a> <a href="/hwagain/blog/tags/localstorage/" style="font-size: 13px;">localstorage</a> <a href="/hwagain/blog/tags/node/" style="font-size: 13px;">node</a> <a href="/hwagain/blog/tags/npm/" style="font-size: 13px;">npm</a> <a href="/hwagain/blog/tags/plugins/" style="font-size: 13px;">plugins</a> <a href="/hwagain/blog/tags/router/" style="font-size: 13px;">router</a> <a href="/hwagain/blog/tags/setting/" style="font-size: 13px;">setting</a> <a href="/hwagain/blog/tags/sftp/" style="font-size: 13px;">sftp</a> <a href="/hwagain/blog/tags/vs-code/" style="font-size: 13px;">vs code</a> <a href="/hwagain/blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="/hwagain/blog/tags/vuex/" style="font-size: 13px;">vuex</a> <a href="/hwagain/blog/tags/webpack/" style="font-size: 13px;">webpack</a> <a href="/hwagain/blog/tags/一键发布/" style="font-size: 13px;">一键发布</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hwagain/blog/archives/2018/11/">十一月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hwagain/blog/archives/2018/10/">十月 2018</a><span class="archive-list-count">8</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/hwagain/blog/2018/11/13/vuex-persistedstate/" class="title">Vuex状态持久化存储之vuex-persistedstate</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-11-13T07:09:26.000Z" itemprop="datePublished">2018-11-13</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/hwagain/blog/2018/11/01/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-11-01T09:50:50.962Z" itemprop="datePublished">2018-11-01</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/hwagain/blog/2018/10/31/layui-router/" class="title">layui-router项目介绍</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-10-31T06:22:05.000Z" itemprop="datePublished">2018-10-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/hwagain/blog/2018/10/26/vue-cli-load-css-confusion/" class="title">vue-cli使用build命令编译css顺序错乱问题</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-10-26T09:37:24.000Z" itemprop="datePublished">2018-10-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/hwagain/blog/2018/10/19/about-IDE-format-code/" class="title">VS Code 代码格式化配置</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-10-19T07:10:43.000Z" itemprop="datePublished">2018-10-19</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-about-IDE-format-code" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      VS Code 代码格式化配置
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/hwagain/blog/2018/10/19/about-IDE-format-code/" class="article-date">
+	  <time datetime="2018-10-19T07:10:43.000Z" itemprop="datePublished">2018-10-19</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/hwagain/blog/tags/formatter/">formatter</a>, <a class="article-tag-link" href="/hwagain/blog/tags/setting/">setting</a>, <a class="article-tag-link" href="/hwagain/blog/tags/vs-code/">vs code</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/hwagain/blog/2018/10/19/about-IDE-format-code/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>统一代码格式，美化代码。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>首先，vetur 默认设置是这个样的。也就是很多是用的 prettier 插件。<br>打开<code>文件 -&gt; 首选项 -&gt; 设置</code>的<code>用户设置</code>加入下列配置信息：<br><img src="/hwagain/blog/2018/10/19/about-IDE-format-code/20181019154332.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&quot;git.autofetch&quot;: false,</span><br><span class="line">// 控制终端游标是否闪烁。</span><br><span class="line">&quot;terminal.integrated.cursorBlinking&quot;: true,</span><br><span class="line">&quot;editor.fontFamily&quot;: &quot;Consolas&quot;,</span><br><span class="line">&quot;vetur.format.defaultFormatter.css&quot;: &quot;prettier&quot;,</span><br><span class="line">&quot;vetur.format.defaultFormatter.postcss&quot;: &quot;prettier&quot;,</span><br><span class="line">&quot;vetur.format.defaultFormatter.scss&quot;: &quot;prettier&quot;,</span><br><span class="line">&quot;vetur.format.defaultFormatter.less&quot;: &quot;prettier&quot;,</span><br><span class="line">&quot;vetur.format.defaultFormatter.stylus&quot;: &quot;stylus-supremacy&quot;,</span><br><span class="line">&quot;vetur.format.defaultFormatter.js&quot;: &quot;prettier&quot;,</span><br><span class="line">&quot;vetur.format.defaultFormatter.ts&quot;: &quot;prettier&quot;,</span><br><span class="line">// &quot;[javascript]&quot;: &#123;</span><br><span class="line">//   &quot;editor.formatOnSave&quot;: true</span><br><span class="line">// &#125;,</span><br><span class="line">&quot;[css]&quot;: &#123;</span><br><span class="line">    &quot;editor.formatOnSave&quot;: true</span><br><span class="line">&#125;,</span><br><span class="line">&quot;[scss]&quot;: &#123;</span><br><span class="line">    &quot;editor.formatOnSave&quot;: true</span><br><span class="line">&#125;,</span><br><span class="line">&quot;[vue]&quot;: &#123;</span><br><span class="line">    &quot;editor.formatOnSave&quot;: true</span><br><span class="line">&#125;,</span><br><span class="line">&quot;prettier.tabWidth&quot;: 2,</span><br><span class="line">//取消js单引号自动转换成双引号</span><br><span class="line">&quot;prettier.semi&quot;: false,</span><br><span class="line">&quot;prettier.singleQuote&quot;: true,</span><br><span class="line">&quot;[markdown]&quot;: &#123;</span><br><span class="line">    &quot;editor.formatOnSave&quot;: true,</span><br><span class="line">    &quot;editor.wordWrap&quot;: &quot;on&quot;,</span><br><span class="line">    &quot;editor.renderWhitespace&quot;: &quot;all&quot;,</span><br><span class="line">    &quot;editor.acceptSuggestionOnEnter&quot;: &quot;off&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="编辑器配置"><a href="#编辑器配置" class="headerlink" title="编辑器配置"></a>编辑器配置</h2><p>在项目文件中新建<code>.editorconfig</code>文件<br>为特定类型指定缩进大小、缩进类型(空格或 tab)，是否自动插入末行等。<br><img src="/hwagain/blog/2018/10/19/about-IDE-format-code/20181019154456.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># editorconfig.org</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">indent_size = 4</span><br><span class="line">indent_style = space</span><br><span class="line">insert_final_newline = true</span><br><span class="line">trim_trailing_whitespace = true</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[*.md]</span><br><span class="line">trim_trailing_whitespace = false</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="/2018/10/19/about-IDE-format-code/" title="VS Code 代码格式化配置" target="_blank" rel="external">/2018/10/19/about-IDE-format-code/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/unclemeric" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/hwagain/blog/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/unclemeric" target="_blank"><span class="text-dark">Meric Lai</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom="">
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/hwagain/blog/2018/10/26/vue-cli-load-css-confusion/" title="vue-cli使用build命令编译css顺序错乱问题"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/hwagain/blog/2018/10/18/FE-Blog/" title="FE-Blog项目说明"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope="" itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/unclemeric" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/hwagain/blog/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/hwagain/blog/js/plugin.min.js"></script>
+<script src="/hwagain/blog/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/hwagain/blog/',
+        CONTENT_URL: '/hwagain/blog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/hwagain/blog/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
