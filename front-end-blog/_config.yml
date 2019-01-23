@@ -15,14 +15,14 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # url: http://yoursite.com
 url: /
-root: ../blog
+root: /blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
 source_dir: source
 #生成静态资源文件夹地址
-public_dir: blog 
+public_dir: public 
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
