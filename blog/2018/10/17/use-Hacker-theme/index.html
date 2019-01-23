@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000">
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top">
+  
+  
+  <title>Use-Hacker-theme | Hexo</title>
+  <meta name="description" content="Hacker | English Docs  Hacker 是一款专注于写作的简洁博客主题。在如此讲究复杂排版的趋势下，选择回归本源，专注于写作这件事。 一开始是moyo为 Wordpress 所创作的一个主题，由 DaraW 移植到 Hexo。 Demo参考我的博客：DaraW  安装获得主题文件， git clone或者download zip均可； 在themes文件夹中创建文件夹Hacke">
+<meta name="keywords" content="hexo-theme-Hacker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Use-Hacker-theme">
+<meta property="og:url" content="/2018/10/17/use-Hacker-theme/index.html">
+<meta property="og:site_name" content="FE-Blog">
+<meta property="og:description" content="Hacker | English Docs  Hacker 是一款专注于写作的简洁博客主题。在如此讲究复杂排版的趋势下，选择回归本源，专注于写作这件事。 一开始是moyo为 Wordpress 所创作的一个主题，由 DaraW 移植到 Hexo。 Demo参考我的博客：DaraW  安装获得主题文件， git clone或者download zip均可； 在themes文件夹中创建文件夹Hacke">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://badges.frapsoft.com/os/v1/open-source.svg?v=103">
+<meta property="og:image" content="https://badges.frapsoft.com/os/gpl/gpl.svg?v=103">
+<meta property="og:image" content="https://ooo.0o0.ooo/2016/08/04/57a306f56bee2.png">
+<meta property="og:updated_time" content="2019-01-22T12:09:22.958Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Use-Hacker-theme">
+<meta name="twitter:description" content="Hacker | English Docs  Hacker 是一款专注于写作的简洁博客主题。在如此讲究复杂排版的趋势下，选择回归本源，专注于写作这件事。 一开始是moyo为 Wordpress 所创作的一个主题，由 DaraW 移植到 Hexo。 Demo参考我的博客：DaraW  安装获得主题文件， git clone或者download zip均可； 在themes文件夹中创建文件夹Hacke">
+<meta name="twitter:image" content="https://badges.frapsoft.com/os/v1/open-source.svg?v=103">
+  <!-- Canonical links -->
+  <link rel="canonical" href="/2018/10/17/use-Hacker-theme/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="FE-Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="../blog/css/style.css">
+  
+  
+  
+  
+</head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/cofess" target="_blank">
+          <img class="img-circle img-rotate" src="../blog/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">昵称</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer &amp; Designer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shenzhen, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索">
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech="">
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope="" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="../blog/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="../blog/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="../blog/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="../blog/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="../blog/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="../blog/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="../blog/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="../blog/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle="tooltip" data-placement="top"><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle="tooltip" data-placement="top"><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle="tooltip" data-placement="top"><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="../blog/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope="" itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/error/">error</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/formatter/">formatter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/hexo-theme/">hexo-theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/hexo-theme-Hacker/">hexo-theme-Hacker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/hexo-theme-pure/">hexo-theme-pure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/layui/">layui</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/localstorage/">localstorage</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/node/">node</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/plugins/">plugins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/router/">router</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/setting/">setting</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/sftp/">sftp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/vs-code/">vs code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/vue/">vue</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/vuex/">vuex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="../blog/tags/一键发布/">一键发布</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="../blog/tags/blog/" style="font-size: 13px;">blog</a> <a href="../blog/tags/error/" style="font-size: 14px;">error</a> <a href="../blog/tags/formatter/" style="font-size: 13px;">formatter</a> <a href="../blog/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="../blog/tags/hexo-theme/" style="font-size: 13px;">hexo-theme</a> <a href="../blog/tags/hexo-theme-Hacker/" style="font-size: 13px;">hexo-theme-Hacker</a> <a href="../blog/tags/hexo-theme-pure/" style="font-size: 13px;">hexo-theme-pure</a> <a href="../blog/tags/javascript/" style="font-size: 13px;">javascript</a> <a href="../blog/tags/js/" style="font-size: 13px;">js</a> <a href="../blog/tags/layui/" style="font-size: 14px;">layui</a> <a href="../blog/tags/localstorage/" style="font-size: 13px;">localstorage</a> <a href="../blog/tags/node/" style="font-size: 13px;">node</a> <a href="../blog/tags/npm/" style="font-size: 13px;">npm</a> <a href="../blog/tags/plugins/" style="font-size: 13px;">plugins</a> <a href="../blog/tags/router/" style="font-size: 13px;">router</a> <a href="../blog/tags/setting/" style="font-size: 13px;">setting</a> <a href="../blog/tags/sftp/" style="font-size: 13px;">sftp</a> <a href="../blog/tags/vs-code/" style="font-size: 13px;">vs code</a> <a href="../blog/tags/vue/" style="font-size: 14px;">vue</a> <a href="../blog/tags/vuex/" style="font-size: 13px;">vuex</a> <a href="../blog/tags/webpack/" style="font-size: 13px;">webpack</a> <a href="../blog/tags/一键发布/" style="font-size: 13px;">一键发布</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../blog/archives/2019/01/">一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../blog/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../blog/archives/2018/10/">十月 2018</a><span class="archive-list-count">8</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="../blog/2019/01/22/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-01-22T12:09:22.948Z" itemprop="datePublished">2019-01-22</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="../blog/2018/11/13/vuex-persistedstate/" class="title">Vuex状态持久化存储之vuex-persistedstate</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-11-13T07:09:26.000Z" itemprop="datePublished">2018-11-13</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="../blog/2018/10/31/layui-router/" class="title">layui-router项目介绍</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-10-31T06:22:05.000Z" itemprop="datePublished">2018-10-31</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="../blog/2018/10/26/vue-cli-load-css-confusion/" class="title">vue-cli使用build命令编译css顺序错乱问题</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-10-26T09:37:24.000Z" itemprop="datePublished">2018-10-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="../blog/2018/10/19/about-IDE-format-code/" class="title">VS Code 代码格式化配置</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2018-10-19T07:10:43.000Z" itemprop="datePublished">2018-10-19</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-use-Hacker-theme" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Use-Hacker-theme
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="../blog/2018/10/17/use-Hacker-theme/" class="article-date">
+	  <time datetime="2018-10-17T02:45:19.000Z" itemprop="datePublished">2018-10-17</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="../blog/tags/hexo-theme-Hacker/">hexo-theme-Hacker</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="../blog/2018/10/17/use-Hacker-theme/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="Hacker-English-Docs"><a href="#Hacker-English-Docs" class="headerlink" title="Hacker | English Docs"></a>Hacker | <a href="/README.md">English Docs</a></h1><p><a href="https://github.com/ellerbrock/open-source-badge/" target="_blank" rel="noopener"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103" alt="Open Source Love"></a> <a href="https://opensource.org/licenses/GPL-2.0" target="_blank" rel="noopener"><img src="https://badges.frapsoft.com/os/gpl/gpl.svg?v=103" alt="GPL Licence"></a></p>
+<p><strong>Hacker 是一款专注于写作的简洁博客主题。在如此讲究复杂排版的趋势下，选择回归本源，专注于写作这件事。</strong></p>
+<p>一开始是<a href="http://liuxinyu.me/" target="_blank" rel="noopener">moyo</a>为 Wordpress 所创作的一个主题，由 DaraW 移植到 Hexo。</p>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p>参考我的博客：<a href="http://blog.daraw.cn/" target="_blank" rel="noopener">DaraW</a></p>
+<p><img src="https://ooo.0o0.ooo/2016/08/04/57a306f56bee2.png" alt=""></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>获得主题文件， <code>git clone</code>或者<code>download zip</code>均可；</p>
+<p>在<code>themes</code>文件夹中创建文件夹<code>Hacker</code>，将主题文件都复制粘贴至<code>Hacker</code>文件夹；</p>
+<p>然后在 hexo 全局配置文件<code>_config.yml</code>中应用主题：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">Hacker</span></span><br></pre></td></tr></table></figure>
+<p>这样就安装好了，开始享受吧~</p>
+<p><strong>注意：版本更新后建议在 hexo 生成前执行一次<code>hexo clean</code>，清除以前的缓存，避免带来的一些莫名其妙的问题。</strong></p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="启用评论和谷歌分析"><a href="#启用评论和谷歌分析" class="headerlink" title="启用评论和谷歌分析"></a>启用评论和谷歌分析</h3><p>在主题配置文件<code>_config.yml</code>中：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># gitment</span></span><br><span class="line"><span class="attr">gitment:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">gitment_owner:</span></span><br><span class="line"><span class="attr">gitment_repo:</span></span><br><span class="line"><span class="attr">gitment_client_id:</span></span><br><span class="line"><span class="attr">gitment_client_secret:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># disqus comment</span></span><br><span class="line"><span class="attr">disqus:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">disqus_shortname:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># google analytics</span></span><br><span class="line"><span class="attr">googleTrackId:</span></span><br></pre></td></tr></table></figure>
+<p><code>gitment</code>: <code>boolean</code>，是否开启 gitment 评论<br><code>gitment_owner</code>: <code>string</code>，你的 GitHub ID<br><code>gitment_repo</code>: <code>string</code>，存储评论的 repo<br><code>gitment_client_id</code>: <code>string</code>，你的 client ID<br><code>gitment_client_secret</code>: <code>string</code>，你的 client secret</p>
+<p><code>disqus</code>: <code>boolean</code>，是否开启 disqus 评论；<br><code>disqus_shortname</code>: <code>string</code>，你的 disqus site shortname。</p>
+<p><code>googleTrackId</code>: <code>string</code>，为谷歌分析的个人 ID，留空则为不使用谷歌分析。</p>
+<h3 id="启用分类和标签页面"><a href="#启用分类和标签页面" class="headerlink" title="启用分类和标签页面"></a>启用分类和标签页面</h3><p>分类功能：执行<code>hexo new page categories</code>，然后修改生成的<code>source/categories/index.md</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2017-01-30 19:16:17</span><br><span class="line">layout: "categories"</span><br><span class="line"></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>如果你需要关闭该页的评论，可以添加一行<code>comments: false</code>；<code>title</code>对应的则是该页的标题。</p>
+<p>标签功能：同理，执行<code>hexo new page tags</code>，然后修改生成的<code>source/tags/index.md</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2017-01-30 19:16:17</span><br><span class="line">layout: "tags"</span><br><span class="line"></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>配置同分类功能。</p>
+<p>在菜单中添加链接：编辑主题的<code>_config.yml</code>，在<code>menu</code>中添加<code>Categories: /categories</code>和<code>Tags: /tags</code>，如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  Home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  Archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">  Categories:</span> <span class="string">/categories</span></span><br><span class="line"><span class="attr">  Tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><h3 id="v1-2-0"><a href="#v1-2-0" class="headerlink" title="v1.2.0"></a>v1.2.0</h3><ul>
+<li>增加<code>gitment</code>支持</li>
+<li>移除多说</li>
+</ul>
+<h3 id="v1-1-0"><a href="#v1-1-0" class="headerlink" title="v1.1.0"></a>v1.1.0</h3><ul>
+<li>增加对关闭文章评论的支持(<a href="https://github.com/CodeDaraW/Hacker/issues/14" target="_blank" rel="noopener">issue#14</a>)</li>
+<li>增加对分类和标签的支持(<a href="https://github.com/CodeDaraW/Hacker/issues/7" target="_blank" rel="noopener">issue#7</a>)</li>
+</ul>
+<h3 id="v1-0-1"><a href="#v1-0-1" class="headerlink" title="v1.0.1"></a>v1.0.1</h3><ul>
+<li>修复了主页上错误的评论链接</li>
+</ul>
+<h3 id="v1-0"><a href="#v1-0" class="headerlink" title="v1.0"></a>v1.0</h3><ul>
+<li>修复从文件夹导致的 bug(<a href="https://github.com/CodeDaraW/Hacker/issues/10" target="_blank" rel="noopener">issue#10</a>)</li>
+<li>修复<code>code</code>标签的显示效果</li>
+</ul>
+<h3 id="v0-3"><a href="#v0-3" class="headerlink" title="v0.3"></a>v0.3</h3><ul>
+<li>重构 ejs 模板</li>
+<li>改用 stylus</li>
+<li>添加英文文档</li>
+</ul>
+<h3 id="v0-2"><a href="#v0-2" class="headerlink" title="v0.2"></a>v0.2</h3><ul>
+<li>去除部分无用 css 和重复 css</li>
+<li>修复无分类/标签依然出现 icon 的 bug</li>
+<li>重写归档列表页面</li>
+<li>修改代码块样式</li>
+</ul>
+<h2 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h2><p>GNU GPL(General Public License) v2.0</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="/2018/10/17/use-Hacker-theme/" title="Use-Hacker-theme" target="_blank" rel="external">/2018/10/17/use-Hacker-theme/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="../blog/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">昵称</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom="">
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="../blog/2018/10/17/layui-template-error-collection/" title="Layui项目常见错误及解决方式"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="../blog/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫">
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="../blog/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫">
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope="" itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle="tooltip" data-placement="top"><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle="tooltip" data-placement="top"><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle="tooltip" data-placement="top"><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle="tooltip" data-placement="top"><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="../blog/atom.xml" target="_blank" title="Rss" data-toggle="tooltip" data-placement="top"><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="../blog/js/plugin.min.js"></script>
+<script src="../blog/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '../blog/',
+        CONTENT_URL: '../blog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="../blog/js/insight.js"></script>
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
